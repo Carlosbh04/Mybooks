@@ -1,0 +1,56 @@
+form{
+    width: 30%;
+    height:560px;
+    background-color: white;
+    margin-left: 500px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px;
+    
+
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+  
+
+}
+.goku{
+    height: 80px;
+    width: 100%;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.goku2{
+    height: 100px;
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.line{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+h2{
+    color: rgb(11, 10, 10);
+}
+
+button{
+    margin-left: 100px;
+}
+input{
+    background-color: rgb(211, 211, 211);
+}

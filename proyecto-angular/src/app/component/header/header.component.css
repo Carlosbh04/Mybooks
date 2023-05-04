@@ -1,0 +1,41 @@
+header{
+    
+    background-color: #006500;
+    color: hsl(0, 0%, 100%);
+    padding: 1.2rem;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+h1{
+    padding-left: 80px;
+    font-size: 50px;
+}
+a{
+    padding-right: 40px;
+    margin-right: 20px;
+}
+nav{
+    /* background-color: blue;
+    height: 20vh;
+    width: 70%; */
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav a{
+    color: rgb(128, 236, 236);
+    text-decoration: none;
+    margin-left: 1rem;
+    
+}
+
+nav a:hover{
+    text-decoration: underline;
+}

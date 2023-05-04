@@ -1,0 +1,14 @@
+main{
+    height: 658px;
+    width: 100%;
+    background-image: url(../../../assets/img/img2/libros-y-letras.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
