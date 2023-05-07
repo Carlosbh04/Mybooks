@@ -160,6 +160,7 @@ img{
 .form-control{
     height: 50px;
     width: 100%;
+    color: rgb(0, 0, 0);
     /* background-color: blueviolet; */
 
 }
@@ -169,14 +170,14 @@ img{
     width: 100%;
     padding-left: 15px;
     background-color: rgba(7, 4, 4, 0.2);
-    color: white;
+    color: rgb(252, 239, 239);
     border-radius: 10px;
 }
 
 
  label{
     font-family: Georgia,  serif;
-    color: #fff5f5;
+    color: #ede6e6;
     height: 26px;
     width:70px;
  
@@ -184,11 +185,11 @@ img{
 }
 
 
-.form-group label, .form-control{
+/* .form-group label, .form-control{
     font-family: Georgia,  serif;
-    color: #fff5f5;
+    color: #f62c2c;
    
-}
+} */
 
 button{
     padding-left: 10px;
