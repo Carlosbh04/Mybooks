@@ -10,6 +10,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { BooksComponent } from './pages/books/books.component';
+import { BookCodePipe } from './pipes/book-code.pipe';
 
 
 
@@ -26,6 +28,8 @@ import { FormsModule } from '@angular/forms';
     FormRegisterComponent,
     RegisterComponent,
     ProfileComponent,
+    BooksComponent,
+    BookCodePipe,
    
     
    
