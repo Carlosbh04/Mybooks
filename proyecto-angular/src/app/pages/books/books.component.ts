@@ -13,8 +13,8 @@ export class BooksComponent {
     new Books(3, 3, '1984', 'Dystopian fiction', 'George Orwell', 7.99, 'https://m.media-amazon.com/images/I/81StSOpmkjL.jpg')
 
   ];
-isEven(even:number){
-  return even % 2 === 0;
+isEven(even:number){ 
+  return even % 2=== 0;
 }
 
 
