@@ -9,3 +9,4 @@ export class Books {
         public photo: string = ''
       ) {}
 }
+

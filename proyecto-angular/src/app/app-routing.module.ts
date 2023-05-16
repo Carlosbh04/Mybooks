@@ -4,7 +4,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { BooksComponent } from './pages/books/books.component';
+import { BooksComponent } from './pages/books/books.component'
 
 
 const routes: Routes = [
@@ -12,7 +12,8 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'footer' , component:FooterComponent},
   {path:'profile', component:ProfileComponent},
-  {path:'books',component:BooksComponent}
+  {path:'books',component:BooksComponent},
+  
   
 
 ];
@@ -20,5 +21,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+ 
 })
 export class AppRoutingModule { }

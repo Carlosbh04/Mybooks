@@ -2,7 +2,7 @@
 
 
 .container_main{
-    
+    height: 1521px;
     width: 100%;
     /* background-color: rgb(239, 20, 8); */
     
@@ -15,6 +15,20 @@
     
   
     
+}
+.close{
+    position: absolute;
+    margin-bottom: 596px;
+    margin-left: 251.2px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
 }
 .goku{
     height: 100%;
@@ -35,13 +49,11 @@
     width: 100%;
     /* background-color: rgb(109, 131, 255); */
     padding-bottom:40px ;
-    
 
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
     
     
 }
@@ -60,10 +72,9 @@
     width: 280px;
     /* background-color: rgb(1, 224, 253); */
     border-radius: 11px;
-    border: 1px solid black;
+  border: 1px solid black;
     border-radius: 10px;
     box-shadow: 15px 15px 15px;
-    
      
 
 
@@ -75,19 +86,6 @@
 
 
 }
-.card-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .card-close:before {
-    content: "X";
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
 h5{
     padding-top: 5px;
 }
