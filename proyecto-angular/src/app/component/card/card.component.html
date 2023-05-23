@@ -5,21 +5,19 @@
   </button>
   <img class="card-img-top" [src]="book.photo" alt="Books cover">
   <div class="card-body">
-    <p>Tapa blanda</p>
+    <p class="RENGOKU">Tapa blanda</p>
     <div class="line"></div>
-    <h5 class="card-title">{{ book.title }}</h5>
+    <h5 class="card-title">{{ book?.title }}</h5>
     <p class="card-text">Author: {{ book.author }}</p>
     <p class="card-text">Type: {{ book.type }}</p>
-    <p><small class="text-muted">{{ book.id_book | bookCode }}</small></p>
+    <p><small class="text-muted">{{ book.id_book|bookCode }}</small></p>
     <div class="drako">
-      <p class="card-text1">Price: {{ book.price }} €</p>
-      <button class="btn text-center" [ngClass]="{'btn-even': isEven(i), 'btn-odd': !isEven(i)}">
-        Comprar
+     <p class="card-text1">Price: {{ book.price }} €</p>
+      <button class="btn text-center" [ngClass]="{'btn-even': isEven(i), 'btn-odd': !isEven(i)}"> Comprar
       </button>
     </div>
   </div>
 </div>
-
 
 
 

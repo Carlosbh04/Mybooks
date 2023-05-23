@@ -1,4 +1,5 @@
 export class Books {
+    ref: string;
     constructor(
         public id_book: number = null,
         public id_user: number = 0,

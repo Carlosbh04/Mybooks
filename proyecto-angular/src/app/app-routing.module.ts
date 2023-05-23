@@ -5,6 +5,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component'
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 const routes: Routes = [
@@ -13,7 +15,8 @@ const routes: Routes = [
   {path:'footer' , component:FooterComponent},
   {path:'profile', component:ProfileComponent},
   {path:'books',component:BooksComponent},
-  
+  {path:'add-book',component:AddBookComponent},
+  {path:'update-book/:id',component:UpdateBookComponent},
   
 
 ];

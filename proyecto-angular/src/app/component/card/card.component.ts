@@ -31,16 +31,4 @@ export class CardComponent implements OnInit {
 
 
 
-  // @Input() cardData: Books;
-  // @Output() deleteBook: EventEmitter<Books> = new EventEmitter<Books>(); 
-  // @Output() addBookEvent = new EventEmitter<Books>();
-  // deleteCard(){
-  //   this.deleteBook.emit(this.cardData);
-  // }
-
-  // addBook(){
-  //   this.addBookEvent.emit(this.cardData)
-  // }
-
-  // books: Books[]= [];
-  // newBook: Books = new Books();
+  

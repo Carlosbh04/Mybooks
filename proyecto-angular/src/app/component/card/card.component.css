@@ -2,9 +2,9 @@
 
 
 .container_main{
-    height: 1521px;
+   
     width: 100%;
-    /* background-color: rgb(239, 20, 8); */
+    background-color: rgb(253, 19, 7);
     
     display: flex;
     justify-content:center;
@@ -18,18 +18,25 @@
 }
 .close{
     position: absolute;
-    margin-bottom: 596px;
-    margin-left: 251.2px;
+    margin-bottom: 549px;
+    margin-left: 282px;
+    margin-top: 10px;
 
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
     background-color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 0.2rem 0.5rem;
     cursor: pointer;
 }
+.RENGOKU{
+  
+    height: 20px;
+    width: 200px;
+}
+
 .goku{
     height: 100%;
     width: 100%;
@@ -59,47 +66,41 @@
 }
 
 .line{
-    height: 2px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 2px;
+  background-color: #000000;
 }
-/* .card-body {
-    padding: 5px 30px;
-  } */
-   
+
 .card{
-    height:545px;
-    width: 280px;
-    /* background-color: rgb(1, 224, 253); */
+    height:565px;
+    width: 320px;
     border-radius: 11px;
-  border: 1px solid black;
+    border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 15px 15px 15px;
+    box-shadow: 8px 8px 8px;
      
-
-
-    
 
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2px;
 
 
 }
-h5{
+h5{ 
+   
+    height: 40px;
+    
     padding-top: 5px;
 }
 
+img{
+    height: 280px;
+    width: 318px;
+    border-radius: 9px;
+   
+}
 
-.card-img-top{
-    object-fit: cover;
-    height: 252px;
-    width: 280px;
-    border-radius: 10px;
-    margin-bottom: 3px;
-
-
-}   
 
 .drako{
     height: 82px;
@@ -116,19 +117,35 @@ h5{
   
 
 }
+.card-body{
+ 
+    height: 20px;
+    width: 317px;
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
  .card-text{
 
     height: 30px;
     width: 220px;
-  
+    word-spacing: 2px;
+    letter-spacing: 2px;
+
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 } 
+
 .card-text1{
     height: 30px;
     width: 100%;
-
+    word-spacing: 2px;
+    letter-spacing: 2px;
 
     display: flex;
     justify-content: center;
@@ -136,6 +153,7 @@ h5{
 }
 .btn{
    width: 100%;
+  margin-left: 30px;
 
 }
 .btn-even {

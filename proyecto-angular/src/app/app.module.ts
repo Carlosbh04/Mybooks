@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './pages/books/books.component';
 import { BookCodePipe } from './pipes/book-code.pipe';
 import { CardComponent } from './component/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { BooksService } from './service/books.service';
+import { CommonModule } from '@angular/common';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
+
 
 
 
@@ -32,7 +37,9 @@ import { CardComponent } from './component/card/card.component';
     ProfileComponent,
     BooksComponent,
     BookCodePipe,
-    CardComponent
+    CardComponent,
+    AddBookComponent,
+    UpdateBookComponent
    
    
     
@@ -43,11 +50,13 @@ import { CardComponent } from './component/card/card.component';
     RouterModule,
     AppRoutingModule,
     FormsModule,
+    CommonModule,
+   
     
 
   
   ],
-  providers: [],
+  providers: [BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
