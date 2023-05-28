@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Books } from 'src/app/models/books';
 import { Router } from '@angular/router';
 import { BooksService } from 'src/app/service/books.service'; 
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-book',
@@ -11,8 +11,8 @@ import { BooksService } from 'src/app/service/books.service';
 })
 export class AddBookComponent implements OnInit {
 
-  book:Books
-  i! : number;
+ @Input() book:Books
+ @Input() i! : number;
 
  newBook: Books = new Books();
 
@@ -26,3 +26,5 @@ export class AddBookComponent implements OnInit {
    ngOnInit(): void {}
  
 }
+
+
