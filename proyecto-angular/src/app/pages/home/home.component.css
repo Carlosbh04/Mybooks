@@ -11,17 +11,17 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 400px;
+    gap: 360px;
 }
 
 h1{
-    color: rgb(133, 109, 29,);
+    color: rgb(0, 0, 0);
     font-size: 70px;
     box-shadow: 10px 10x 10px;
 }
 
 h2{
-     color: rgb(124, 188, 244,0.6);
+     color: black;
      font-size: 40px;
    
 
@@ -32,7 +32,7 @@ h2{
 }
  
 b{
-    color: rgba(233, 233, 11, 0.4);
+    color:black;
 }
 
   
