@@ -1,0 +1,47 @@
+
+    <div class="container_main">
+    <div class=" goku">
+        <div class="goku1 col-4" *ngFor="let book of books; let i = even">
+          <div class="card ">
+            <img class="card-img-top" [src]="book.photo" alt="Books cover">
+            <div class="card-body">
+              <p>Tapa blanda</p>
+              <div class="line"></div>
+              <h5 class="card-title">{{ book.title }}</h5>
+              <p class="card-text">Author: {{ book.author }}</p>
+              <p class="card-text">Type: {{ book.type }}</p>
+              <p> <small class="text-muted">{{ book.id_book | bookCode }}</small></p>
+             <div class="drako ">
+              <p class="card-text1">Price: {{ book.price }} €</p>
+              <button class="btn text-center " [ngClass]="{'btn-even':isEven(i) , 'btn-odd': !isEven(i)}">Comprar</button>
+             </div>
+          </div>
+        </div> 
+        </div>
+         <div class="padre">
+            <h1>Añadir Libros</h1>
+            <form class="hijo1">
+              <div class="form-group">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title" [(ngModel)]="newBook.title">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="author" name="author" placeholder="Author" [(ngModel)]="newBook.author">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="type" name="type" placeholder="Type" [(ngModel)]="newBook.type">
+              </div>
+              <div class="form-group">
+                 <input type="number" class="form-control" id="price" name="price" placeholder="Price" [(ngModel)]="newBook.price">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="photo" name="photo" placeholder="Photo URL" [(ngModel)]="newBook.photo">
+              </div>
+               <div class="form-group">
+                <input type="number" class="form-control" id="id_book" name="id_book" placeholder="id_book" [(ngModel)]="newBook.id_book">
+               </div>
+              <button type="submit" class="otaku btn btn-success text-center" (click)="addBook()">Insertar Libro</button>
+            </form>
+          </div>  
+        
+   
+    

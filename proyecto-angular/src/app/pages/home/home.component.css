@@ -1,14 +1,38 @@
 main{
     height: 658px;
     width: 100%;
-    background-image: url(../../../assets/img/img2/libros-y-letras.jpg);
+    background-image: url('../../../assets/img/img2/libros-y-letras.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     
 
 
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    gap: 400px;
 }
+
+h1{
+    color: rgb(133, 109, 29,);
+    font-size: 70px;
+    box-shadow: 10px 10x 10px;
+}
+
+h2{
+     color: rgb(124, 188, 244,0.6);
+     font-size: 40px;
+   
+
+     display: flex;
+     justify-content:center ;
+     align-items: center;
+     flex-direction: column;
+}
+ 
+b{
+    color: rgba(233, 233, 11, 0.4);
+}
+
+  
