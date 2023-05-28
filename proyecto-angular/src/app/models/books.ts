@@ -1,8 +1,5 @@
 export class Books {
-<<<<<<< HEAD
-=======
     ref: string;
->>>>>>> dia5
     constructor(
         public id_book: number = null,
         public id_user: number = 0,
@@ -13,7 +10,3 @@ export class Books {
         public photo: string = ''
       ) {}
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> dia5

@@ -1,0 +1,97 @@
+
+main{
+  width: 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/img/img2/327974_les_zhudkij-les_tyomnyj-les_1920x1200_www.Gde-Fon.com.jpg');
+}
+
+
+.rengoku {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 40px;
+  background: rgba(4, 1, 4, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(26, 132, 199, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 330px;
+
+}
+
+.rengoku .circle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rengoku .circle-icon i {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.rengoku h3.card-title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rengoku .form-group {
+  margin-bottom: 20px;
+}
+
+.rengoku .input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+input{
+  width: 250px;
+}
+
+.rengoku .input-icon i {
+  position: absolute;
+  left: 10px;
+  color: #000000;
+}
+
+.rengoku .form-control {
+  padding-left: 30px;
+}
+
+.rengoku .invalid-feedback {
+  color: #ffffff;
+  font-size: 10px;
+  height: 2px;
+  width: 100%;
+  margin-top: 4px;
+  margin-left: 5px;
+  display: block;
+}
+
+
+.rengoku .btn-primary {
+  padding: 10px 20px;
+  background-color: #519194;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.rengoku .btn-primary:hover {
+  background-color: #02c6e3;
+}
+

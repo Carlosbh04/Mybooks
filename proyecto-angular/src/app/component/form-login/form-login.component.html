@@ -1,0 +1,68 @@
+<main>
+  <div class="rengoku">
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <div class="circle-icon">
+        <i class="fa-solid fa-user fa-2xl" style="color: #049bf8;"></i>
+      </div>
+      <h3 class="card-title">Login</h3>
+      <div class="form-group">
+        <div class="input-icon">
+          <i class="far fa-envelope" style="color: #000000;"></i>
+          <input
+            type="email"
+            placeholder="CORREO ELECTRONICO"
+            class="form-control with-icon"
+            formControlName="email"
+            autocomplete="email"
+            [class.is-invalid]="loginForm.get('email').invalid && (loginForm.get('email').dirty || submitted)"
+            [class.is-valid]="loginForm.get('email').valid && (loginForm.get('email').dirty || submitted)"
+          />
+        </div>
+        <div
+          *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || submitted)"
+          class="invalid-feedback"
+        >
+          Por favor, introduce un correo electrónico válido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-icon">
+          <i class="fas fa-lock" style="color: #000000;"></i>
+          <input
+            type="{{ passwordFieldType === 'password' ? 'password' : 'text' }}"
+            placeholder="CONTRASEÑA"
+            class="form-control with-icon"
+            formControlName="password"
+            [class.is-invalid]="loginForm.get('password').invalid && (loginForm.get('password').dirty || submitted)"
+            [class.is-valid]="loginForm.get('password').valid && (loginForm.get('password').dirty || submitted)"
+            (input)="onPasswordInput($event)"
+          />
+
+          <i
+            class="far {{ passwordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash' }}"
+            (click)="togglePasswordVisibility()"
+            style="color: #000000; cursor: pointer; margin-left: 199px;"
+          ></i>
+        </div>
+        <div
+          *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || submitted)"
+          class="invalid-feedback"
+        >
+          <div *ngIf="loginForm.get('password').errors?.required">La contraseña es requerida.</div>
+          <div *ngIf="loginForm.get('password').errors?.minlength">
+            La contraseña debe tener al menos 6 caracteres.
+          </div>
+          <div *ngIf="loginForm.get('password').errors?.maxlength">
+            La contraseña debe tener como máximo 12 caracteres.
+          </div>
+          <div *ngIf="loginForm.get('password').errors?.pattern">
+            La contraseña debe contener al menos una letra mayúscula y una letra minúscula.
+          </div>
+        </div>
+      </div>
+
+      <button type="reset" class="btn btn-primary">Iniciar sesión</button>
+    </form>
+  </div>
+</main>

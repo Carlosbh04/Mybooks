@@ -28,8 +28,9 @@
             
             "styles": [
               "src/styles.css"
-              
+             
             ],
+            
             
             "scripts": []
           },

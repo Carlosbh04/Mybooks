@@ -11,8 +11,8 @@ import { BooksService } from 'src/app/service/books.service';
 })
 export class AddBookComponent implements OnInit {
 
- @Input() book:Books
- @Input() i! : number;
+  book:Books
+  i! : number;
 
  newBook: Books = new Books();
 

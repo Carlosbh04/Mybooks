@@ -10,7 +10,6 @@ export class CardComponent implements OnInit {
 
   @Input() book!:Books;
   @Input() i! : number;
-  
   @Output() remove = new EventEmitter<Books>();
 
   ngOnInit(): void { }
