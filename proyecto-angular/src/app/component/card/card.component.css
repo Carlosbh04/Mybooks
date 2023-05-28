@@ -2,28 +2,41 @@
 
 
 .container_main{
-<<<<<<< HEAD
-    height: 1521px;
-=======
-    
->>>>>>> dia5
+   
     width: 100%;
-    /* background-color: rgb(239, 20, 8); */
+    background-color: rgb(253, 19, 7);
     
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    align-items: flex-start;
-=======
     align-items: center;
->>>>>>> dia5
     
   
     
   
     
 }
+.close{
+    position: absolute;
+    margin-bottom: 549px;
+    margin-left: 282px;
+    margin-top: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+}
+.RENGOKU{
+  
+    height: 20px;
+    width: 200px;
+}
+
 .goku{
     height: 100%;
     width: 100%;
@@ -43,88 +56,51 @@
     width: 100%;
     /* background-color: rgb(109, 131, 255); */
     padding-bottom:40px ;
-<<<<<<< HEAD
-=======
-    
->>>>>>> dia5
 
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-<<<<<<< HEAD
-=======
-    gap: 20px;
->>>>>>> dia5
     
     
 }
 
 .line{
-    height: 2px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 2px;
+  background-color: #000000;
 }
-/* .card-body {
-    padding: 5px 30px;
-  } */
-   
+
 .card{
-    height:545px;
-    width: 280px;
-    /* background-color: rgb(1, 224, 253); */
+    height:565px;
+    width: 320px;
     border-radius: 11px;
-<<<<<<< HEAD
-  border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 15px 15px 15px;
-=======
     border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 15px 15px 15px;
-    
->>>>>>> dia5
+    box-shadow: 8px 8px 8px;
      
-
-
-    
 
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2px;
 
 
 }
-<<<<<<< HEAD
-=======
-.card-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .card-close:before {
-    content: "X";
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
->>>>>>> dia5
-h5{
+h5{ 
+   
+    height: 40px;
+    
     padding-top: 5px;
 }
 
+img{
+    height: 280px;
+    width: 318px;
+    border-radius: 9px;
+   
+}
 
-.card-img-top{
-    object-fit: cover;
-    height: 252px;
-    width: 280px;
-    border-radius: 10px;
-    margin-bottom: 3px;
-
-
-}   
 
 .drako{
     height: 82px;
@@ -141,19 +117,35 @@ h5{
   
 
 }
+.card-body{
+ 
+    height: 20px;
+    width: 317px;
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
  .card-text{
 
     height: 30px;
     width: 220px;
-  
+    word-spacing: 2px;
+    letter-spacing: 2px;
+
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 } 
+
 .card-text1{
     height: 30px;
     width: 100%;
-
+    word-spacing: 2px;
+    letter-spacing: 2px;
 
     display: flex;
     justify-content: center;
@@ -161,10 +153,7 @@ h5{
 }
 .btn{
    width: 100%;
-<<<<<<< HEAD
-=======
-  
->>>>>>> dia5
+  margin-left: 30px;
 
 }
 .btn-even {
@@ -178,7 +167,6 @@ h5{
   }
   
 
-<<<<<<< HEAD
   .padre{
     width: 100%;
     height: 821px;
@@ -235,41 +223,10 @@ h1{
     /* background-color: aqua; */
    
     
-=======
-button{
-    height: 50px;
-    background-color: #18b052;
-    border-radius: 100px;
-    position: absolute;
-    margin-top: 2px;
-   
-    border:solid 2px #18b052;
-}
-
-input{
-    position: absolute;
-    height: 30px;
-    width: 20px;
-    border-radius: 20px;
-    padding-left: 50px ;
-    
-    outline: none;
-}
-i {
-    font-size: 30px;
-    width: 50px;
-    color: #0772fe;
-    padding-left:5px ;
-    margin-top: 2px;
-    cursor: pointer;
-    
-  
->>>>>>> dia5
 
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
 }
 
 .otaku{
@@ -288,26 +245,3 @@ i {
     color: white;
 
 }
-=======
-  }
-  
- 
-  form{
-
-    /* width: 22%; */
-    height: 50px;
-    /* background-color: #0048c4; */
-    position: absolute;
-    margin-left: 1400px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
- 
-  }
-  
-   form:hover input{
-    width: 300px;
-   }
->>>>>>> dia5

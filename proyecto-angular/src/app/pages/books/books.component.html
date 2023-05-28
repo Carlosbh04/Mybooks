@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     <div class="container_main">
     <div class=" goku">
@@ -45,3 +46,22 @@
         
    
     
+=======
+<form>
+  <input type="text" id="search_bar" name="searchTerm" placeholder="¿Que deseas Buscar?" (keyup)="searchBooks()" #search_id_book>
+  <button (click)="searchBooks()">
+    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+  </button>
+</form>
+
+
+<div class="container_main">
+  <div class="goku">
+    <div class="goku1">
+      <ng-container *ngFor="let book of filteredBooks; let i = index">
+        <app-card [book]="book" [i]="i" (remove)="removeBook($event)"></app-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
+>>>>>>> dia5
