@@ -24,6 +24,7 @@ export class FormLoginComponent implements OnInit {
           Validators.required,
           Validators.minLength(6),
           Validators.maxLength(12),
+          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z]).*$'),
           this.validatePassword
         ]
       ]

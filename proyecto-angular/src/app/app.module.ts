@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -57,6 +57,7 @@ import { FormLoginComponent } from './component/form-login/form-login.component'
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    HttpClientModule,
    
     
 

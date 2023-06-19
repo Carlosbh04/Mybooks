@@ -1,6 +1,6 @@
 <form>
-  <input type="text" id="search_bar" name="searchTerm" placeholder="¿Que deseas Buscar?" (keyup)="searchBooks()" #search_id_book>
-  <button (click)="searchBooks()">
+  <input type="text" id="search_bar" name="searchTerm" placeholder="¿Qué deseas buscar?" [(ngModel)]="searchTerm">
+  <button (click)="searchBooksById()">
     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
   </button>
 </form>

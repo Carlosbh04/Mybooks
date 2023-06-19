@@ -1,8 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Books } from 'src/app/models/books';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BooksService } from 'src/app/service/books.service'; 
-
+import { BooksService } from 'src/app/service/books.service';
+import { Books } from 'src/app/models/books';
 
 @Component({
   selector: 'app-add-book',
@@ -10,19 +9,21 @@ import { BooksService } from 'src/app/service/books.service';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
+  newBook: Books = new Books();
 
- @Input() book:Books
- @Input() i! : number;
+  constructor(private router: Router, private booksService: BooksService) {}
 
- newBook: Books = new Books();
+  addBook() {
+    this.booksService.addBook(this.newBook).subscribe({
+      next: () => {
+        console.log('Libro agregado correctamente');
+        this.router.navigate(['/books']);
+      },
+      error: (error) => {
+        console.log('Error al agregar el libro:', error);
+      }
+    });
+  }
 
- constructor(private router : Router, private booksService: BooksService){}
-
-   addBook(){
-  this.booksService.addBook(this.newBook);
-  this.router.navigate(['/books']);
-   };
-
-   ngOnInit(): void {}
- 
+  ngOnInit(): void {}
 }

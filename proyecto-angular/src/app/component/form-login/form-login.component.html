@@ -46,8 +46,8 @@
           ></i>
         </div>
         <div
-          *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || submitted)"
           class="invalid-feedback"
+          *ngIf="(loginForm.get('password').dirty || submitted)"
         >
           <div *ngIf="loginForm.get('password').errors?.required">La contraseña es requerida.</div>
           <div *ngIf="loginForm.get('password').errors?.minlength">
@@ -56,9 +56,9 @@
           <div *ngIf="loginForm.get('password').errors?.maxlength">
             La contraseña debe tener como máximo 12 caracteres.
           </div>
-          <div *ngIf="loginForm.get('password').errors?.pattern">
-            La contraseña debe contener al menos una letra mayúscula y una letra minúscula.
-          </div>
+          <!-- <div *ngIf="loginForm.get('password').errors?.pattern">
+            La contraseña debe contener al menos una letra mayúscula.
+          </div> -->
         </div>
       </div>
 
@@ -66,3 +66,4 @@
     </form>
   </div>
 </main>
+

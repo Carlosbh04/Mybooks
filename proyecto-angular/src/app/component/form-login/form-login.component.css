@@ -24,6 +24,7 @@ main{
   justify-content: center;
   height: 330px;
 
+
 }
 
 .rengoku .circle-icon {
@@ -41,43 +42,52 @@ main{
 .rengoku h3.card-title {
   margin: 0;
   padding: 0;
-  color: #ffffff;
+  color: #fffdfd;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .rengoku .form-group {
+  
   margin-bottom: 20px;
 }
 
 .rengoku .input-icon {
   position: relative;
+  margin-top: px;
   display: flex;
   align-items: center;
   
 }
 input{
+  background-color: #f9f9f9;
   width: 250px;
+  margin-top: 10px;
 }
 
 .rengoku .input-icon i {
   position: absolute;
   left: 10px;
   color: #000000;
+  margin-top: 10px;
 }
 
 .rengoku .form-control {
   padding-left: 30px;
+ 
 }
 
 .rengoku .invalid-feedback {
-  color: #ffffff;
-  font-size: 10px;
+  color: #cf1919;
+  font-size: 12px;
   height: 2px;
   width: 100%;
   margin-top: 4px;
-  margin-left: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: block;
+
 }
 
 
@@ -89,9 +99,13 @@ input{
   border-radius: 5px;
   cursor: pointer;
   margin-left: 60px;
+  margin-top: 20px;
 }
 
 .rengoku .btn-primary:hover {
   background-color: #02c6e3;
 }
 
+.password{
+  height: 10px;
+}
