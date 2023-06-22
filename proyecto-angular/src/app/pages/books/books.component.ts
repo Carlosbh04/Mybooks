@@ -47,12 +47,17 @@ export class BooksComponent implements OnInit {
 
   removeBook(book: Books) {
     this.booksService.deleteBook(book.id_book.toString()).subscribe({
-      next: () => {
-        const index = this.books.indexOf(book);
-        if (index !== -1) {
-          this.books.splice(index, 1);
-          this.filteredBooks = this.books.slice();
-          this.showAllBooks(); // Mostrar todos los libros después de eliminar el ID
+      next: (response) => {
+        if (response) {
+          const index = this.books.findIndex((b) => b.id_book === book.id_book);
+          if (index !== -1) {
+            this.books.splice(index, 1);
+            this.filteredBooks = this.books.slice();
+            this.showAllBooks(); // Mostrar todos los libros después de eliminar el ID
+          }
+          console.log('Libro eliminado correctamente');
+        } else {
+          console.log('No se pudo eliminar el libro');
         }
       },
       error: (error) => {
@@ -60,7 +65,7 @@ export class BooksComponent implements OnInit {
       }
     });
   }
-
+  
   searchBooksById() {
     if (this.searchTerm) {
       const id = Number(this.searchTerm);

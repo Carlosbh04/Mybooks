@@ -9,6 +9,7 @@ import { Books } from '../models/books';
 export class BooksService {
   private apiUrl = 'http://localhost:3000/book';
   private bookToUpdate: Books;
+
   constructor(private http: HttpClient) {}
 
   getBooks(): Observable<Books[]> {
@@ -19,10 +20,14 @@ export class BooksService {
     return this.http.post<any>(this.apiUrl, book);
   }
 
-  deleteBook(bookId: string): Observable<void> {
-    const url = `${this.apiUrl}/${bookId}`;
-    return this.http.delete<void>(url);
+  deleteBook(bookId: string): Observable<boolean> {
+    const url = `${this.apiUrl}`;
+    const options = {
+      body: { id_book: bookId }
+    };
+    return this.http.delete<boolean>(url, options);
   }
+  
 
   getBookById(id: number): Observable<Books> {
     const url = `${this.apiUrl}/${id}`;
@@ -30,14 +35,14 @@ export class BooksService {
   }
 
   updateBook(book: Books): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/${book.id_book}`, book);
+    const url = `${this.apiUrl}`;
+    return this.http.put<any>(url, book);
   }
 
   searchBooks(searchTerm: string): Observable<Books[]> {
     const url = `${this.apiUrl}?search=${searchTerm}`;
     return this.http.get<Books[]>(url);
   }
-
 
   setBookToUpdate(book: Books) {
     this.bookToUpdate = book;
