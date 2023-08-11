@@ -1,28 +1,35 @@
+<!-- Form Block -->
+<div class="form-block">
+  <form #updateBookForm="ngForm" (ngSubmit)="update(updateBookForm)">
+      <h1 class="form__header">Modificar libro</h1>
 
- <div class="padre">
-    <h1> Modificar libro</h1>
-    <form class="hijo1">
-      <div class="form-group">
-        <input type="text" class="form-control" id="title" name="title" placeholder="Title" #title>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="author" name="author" placeholder="Author"  #type>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="type" name="type" placeholder="Type" #author>
-      </div>
-      <div class="form-group">
-         <input type="number" class="form-control" id="price" name="price" placeholder="price"  #price>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="photo" name="photo" placeholder="Photo URL" #photo>
-      </div>
-       <div class="form-group">
-        <input type="number" class="form-control" id="id_book" name="id_book" placeholder="id book"  #id_book>
-       </div>
-      <button type="reset" class="otaku btn btn-success text-center" (click)="update(title.value,type.value,author.value,price.value,photo.value,id_book.value)" >Modificar</button>
-    </form>
-  </div>  
+      <div class="form__body">
+          <div class="form__data">
+              <input class="input" type="text" id="title" placeholder="Título a modificar" name="title" [(ngModel)]="title" #titleId="ngModel"
+              [ngClass]="{'is_invalid': (titleId.dirty || titleId.touched) && titleId.invalid}">
 
+              <input class="input" type="text" id="type" placeholder="Tapa blanda/dura" name="type" [(ngModel)]="type" #typeId="ngModel"
+              [ngClass]="{'is_invalid': (typeId.dirty || typeId.touched) && typeId.invalid}">
 
+              <input class="input" type="text" id="author" placeholder="Autor" name="author" [(ngModel)]="author" #authorId="ngModel"
+              [ngClass]="{'is_invalid': (authorId.dirty || authorId.touched) && authorId.invalid}" >
 
+              <input class="input" type="text" id="price" placeholder="Precio" name="price" [(ngModel)]="price" #priceId="ngModel"
+              [ngClass]="{'is_invalid': (priceId.dirty || priceId.touched) && priceId.invalid}">
+
+              <input class="input" type="text" id="photo" placeholder="Foto" name="photo" [(ngModel)]="photo" #photoId="ngModel"
+              [ngClass]="{'is_invalid': (photoId.dirty || photoId.touched) && photoId.invalid}">
+
+              <input class="input" type="text" id="id_book" placeholder="Código libro a modificar" name="id_book" [(ngModel)]="id_book" #bookId="ngModel"
+              [ngClass]="{'is_invalid': (bookId.dirty || bookId.touched) && bookId.invalid}" required>
+              <div *ngIf="(bookId.dirty || bookId.touched) && bookId.invalid" class="invalid_input">
+                  <p *ngIf="bookId.errors.required">*El ID del libro es obligatorio</p>
+              </div>
+          </div>
+
+          <button class="form__button" [disabled]="updateBookForm.invalid">
+              Modificar Libro
+          </button>
+      </div>
+  </form>
+</div>

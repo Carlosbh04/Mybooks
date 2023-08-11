@@ -1,71 +1,73 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import Swal from 'sweetalert2';
+import { User } from 'src/app/models/user.model';
+import { UserService } from 'src/app/service/user-service.service';
+import { Router } from '@angular/router';
+import { Response } from 'src/app/models/response';
+import { catchError, map } from 'rxjs';
 
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
   styleUrls: ['./form-login.component.css']
 })
-export class FormLoginComponent implements OnInit {
-  loginForm: FormGroup;
-  email: string;
-  password: string;
-  submitted = false;
-  passwordFieldType = 'password';
+export class FormLoginComponent {
 
-  constructor(private formBuilder: FormBuilder) {}
+  public form_login: FormGroup;
+  public user:User;
+  public errorMsgFromServer: string;
 
-  ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(6),
-          Validators.maxLength(12),
-          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z]).*$'),
-          this.validatePassword
-        ]
-      ]
-    });
+  constructor(public userService: UserService, public router: Router){}
+
+  ngOnInit(){
+    let minLength:number = 8;
+    this.form_login = new FormGroup({
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'password': new FormControl(null, [Validators.required, Validators.minLength(minLength)])
+    })
   }
 
-  validatePassword(control) {
-    const hasUppercase = /[A-Z]/.test(control.value);
-    const hasLowercase = /[a-z]/.test(control.value);
-    const valid = hasUppercase && hasLowercase;
-    if (!valid) {
-      return { invalidPassword: true };
-    }
-    return null;
+  successMsg(){
+    Swal.fire({
+      icon: 'success',
+      title: '¡Bienvenido/a!',
+      text: 'Has iniciado sesión correctamente. Disfruta de todas las funciones y características de nuestra aplicación. ¡Gracias por ser parte de nuestra comunidad!'
+    }).then(()=>{
+      this.router.navigateByUrl('/books');
+    })
   }
 
-  togglePasswordVisibility() {
-    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
-  }
+  errorMsg(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Lo sentimos, no fue posible iniciar sesión con las credenciales proporcionadas. Por favor, verifica tus datos e intenta nuevamente. Si el problema persiste, no dudes en contactarnos para recibir asistencia. ¡Gracias!'
+    })
 
-  onPasswordInput(event: any) {
-    const value = event.target.value;
-    if (value.length > 12) {
-      event.target.value = value.slice(0, 12); // Recortar el valor a 12 caracteres
-      this.loginForm.get('password').setValue(value.slice(0, 12)); // Actualizar el valor en el formulario
-    }
+    console.log("Los datos no coinciden con ningún usuario registrado");
   }
 
   onSubmit() {
-    this.submitted = true;
-
-    if (this.loginForm.invalid) {
-      this.loginForm.markAllAsTouched(); // Marcar todos los campos como "touched" para mostrar los mensajes de error
-      return;
-    }
-
-    // Lógica adicional para enviar el formulario o realizar otras acciones
-    // ...
-
-    // Reiniciar los campos y el formulario después de enviarlo
-    this.loginForm.reset();
-    this.submitted = false;
+    let email = this.form_login.get('email').value;
+    let password = this.form_login.get('password').value;
+    this.user = new User(null, null, null, email, null, password);
+  
+    this.userService.loginUser(this.user).pipe(
+      map((data: Response) => {
+        if (data.result && data.result.length > 0) {
+          this.userService.logueado = true;
+          this.userService.user = data.result[0];
+          this.successMsg();
+        } else {
+          throw new Error('Los datos no coinciden con ningún usuario registrado');
+        }
+      }),
+      catchError((error) => {
+        this.errorMsgFromServer = 'Hubo un problema al comunicarse con el servidor.';
+        this.errorMsg();
+        throw error;
+      })
+    ).subscribe();
   }
 }

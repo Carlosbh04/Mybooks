@@ -1,17 +1,15 @@
-<form>
-  <input type="text" id="search_bar" name="searchTerm" placeholder="¿Qué deseas buscar?" [(ngModel)]="searchTerm">
-  <button (click)="searchBooksById()">
-    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-  </button>
-</form>
-
-
-<div class="container_main">
-  <div class="goku">
-    <div class="goku1">
-      <ng-container *ngFor="let book of filteredBooks; let i = index">
-        <app-card [book]="book" [i]="i" (remove)="removeBook($event)"></app-card>
-      </ng-container>
-    </div>
-  </div>
+<main>
+  <input type="search" id="search_bar" placeholder="Buscador de libros...(Introduce la Ref del libro)" (keyup)="searchBook(searched_id_book.value)" #searched_id_book>
+  <!-- Cards Block -->
+  <div class="main-container" *ngIf="books?.length > 0; else empty">
+    <ng-container *ngFor="let book of books; let par = even">
+        <app-card [book]="book" [par]="par" (bookTitle)="deleteBook($event)"></app-card>
+    </ng-container>
 </div>
+
+  <ng-template #empty>
+      <div class="main-container" style="height: 100vh;">
+          <h1 class="text__empty">No hay Libros</h1>
+      </div>
+  </ng-template>
+</main>

@@ -16,8 +16,8 @@ const routes: Routes = [
   {path:'footer' , component:FooterComponent},
   {path:'profile', component:ProfileComponent},
   {path:'books',component:BooksComponent},
-  {path:'add-book',component:AddBookComponent},
-  {path:'update-book/:id',component:UpdateBookComponent},
+  {path:'addBook',component:AddBookComponent},
+  {path:'updateBook',component:UpdateBookComponent},
   {path: 'Login',component:LoginComponent},
   
 

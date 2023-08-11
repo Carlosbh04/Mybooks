@@ -1,111 +1,124 @@
-
-main{
-  width: 100%;
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-image: url('../../../assets/img/img2/327974_les_zhudkij-les_tyomnyj-les_1920x1200_www.Gde-Fon.com.jpg');
-}
-
-
-.rengoku {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 450px;
-  padding: 40px;
-  background: rgba(4, 1, 4, 0.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(26, 132, 199, 0.6);
-  border-radius: 10px;
+form{
+  border: 1px solid var(--color-primario);
+  border-radius: 5px;
+  background-color: var(--color-blanco);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  height: 330px;
-
-
+  gap: 20px;
+  width: 400px;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  background-color: rgb(58, 190, 230);
+  margin: auto;
+  margin-top: 150px;
 }
+  .form__header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: '--fuente-primaria';
+  }
+      .line{
+          background-color: var(--color-terciario);
+          height: 3px;
+          width: 400px;
+      }
+  .form__register{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+  }
+      .input{
+          border: 1px solid var(--color-gris);
+          border-radius: 5px;
+          color: black;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          text-align: center;
+          height: 36px;
+          width: 350px;
+      }
+      .input::placeholder{
+          color: var(--color-gris);
+          font-size: 13px;
+          padding-left: 10px;
+      }
+      .input[type=text]:focus, .input[type=password]:focus{
+          color: var(--color-primario);
+          border-color: var(--color-terciario);
+          box-shadow: 0 0 8px var(--color-pastel);
+          outline: 0 none;
+      }
+  .form__button{
+      box-shadow: 2px 2px 2px var(--color-primario);
+      background-color: var(--color-secundario);
+      width: 120px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+      color: var(--color-blanco);
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  .form__button:hover{
+      border: 2px solid var(--color-primario);
+      background-color: var(--color-blanco);
+      color: var(--color-primario);
+  }
+  .form__button:active{
+      font-weight: 600;
+      transform: translateY(4px);
+  }
+  .form__button:disabled{
+      background-color: var(--color-gris);
+      transform: translateY(0px);
+      font-weight: bold;
+      border: none;
+      color: var(--color-blanco);
+  }
 
-.rengoku .circle-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+/* Validación de los inputs*/
+.is_invalid[type=text]:focus, .is_invalid[type=password]:focus{
+  color: red;
+  border-color: var(--color-terciario);
+  box-shadow: 0 0 8px red;
+  outline: 0 none;
 }
-
-.rengoku .circle-icon i {
-  font-size: 2rem;
-  color: #000000;
-}
-
-.rengoku h3.card-title {
-  margin: 0;
-  padding: 0;
-  color: #fffdfd;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.rengoku .form-group {
-  
-  margin-bottom: 20px;
-}
-
-.rengoku .input-icon {
-  position: relative;
-  margin-top: px;
-  display: flex;
-  align-items: center;
-  
-}
-input{
-  background-color: #f9f9f9;
-  width: 250px;
-  margin-top: 10px;
-}
-
-.rengoku .input-icon i {
-  position: absolute;
-  left: 10px;
-  color: #000000;
-  margin-top: 10px;
-}
-
-.rengoku .form-control {
-  padding-left: 30px;
- 
-}
-
-.rengoku .invalid-feedback {
-  color: #cf1919;
+.invalid_input{
+  width: 350px;
   font-size: 12px;
-  height: 2px;
-  width: 100%;
-  margin-top: 4px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-
+  text-align: end;
 }
-
-
-.rengoku .btn-primary {
-  padding: 10px 20px;
-  background-color: #519194;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 60px;
-  margin-top: 20px;
+/*----------Media-Queries---------*/
+@media screen and (max-width: 414px) {
+  form{
+      width: 350px;
+  }
+  .line{
+      width: 310px;
+  }
+  .input{
+      width: 310px;
+  }
+  .invalid_input{
+      width: 310px;
+  }
 }
-
-.rengoku .btn-primary:hover {
-  background-color: #02c6e3;
-}
-
-.password{
-  height: 10px;
+@media screen and (max-width: 280px) {
+  form{
+      width: 250px;
+  }
+  .line{
+      width: 210px;
+  }
+  .input{
+      width: 200px;
+  }
+  .invalid_input{
+      width: 200px;
+  }
 }

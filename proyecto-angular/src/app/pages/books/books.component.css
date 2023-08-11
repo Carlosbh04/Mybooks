@@ -1,207 +1,55 @@
-
-
-
-.container_main{
-    
-    width: 100%;
-    /* background-color: rgb(239, 20, 8); */
-    
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    align-items: center;
-    
-  
-    
-  
-    
-}
-.goku{
+main{
     height: 100%;
     width: 100%;
-    /* background-color: #4004e5;  */
-    
+    background-image: url(../../../assets/img/img2/magic-book-with-shining-lights-picture-id516137066.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    
- 
-    
-}
-.goku1{
-    height: 720px;
-    width: 100%;
-    /* background-color: rgb(109, 131, 255); */
-    padding-bottom:40px ;
-    
-
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    
-    
-}
-
-.line{
-    height: 2px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-}
-/* .card-body {
-    padding: 5px 30px;
-  } */
-   
-.card{
-    height:545px;
-    width: 280px;
-    /* background-color: rgb(1, 224, 253); */
-    border-radius: 11px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow: 15px 15px 15px;
-    
-     
-
-
-    
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-.card-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .card-close:before {
-    content: "X";
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-h5{
-    padding-top: 5px;
-}
-
-
-.card-img-top{
-    object-fit: cover;
-    height: 252px;
-    width: 280px;
-    border-radius: 10px;
-    margin-bottom: 3px;
-
-
-}   
-
-.drako{
-    height: 82px;
-    width: 200px;
-    /* background-color: rgb(138, 14, 124); */
-    padding-bottom: 8px;
-
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-    margin-bottom: 30px;
-  
-
-}
- .card-text{
-
-    height: 30px;
-    width: 220px;
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-} 
-.card-text1{
-    height: 30px;
-    width: 100%;
-
-
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
-.btn{
-   width: 100%;
-  
-
-}
-.btn-even {
-    background-color: #888b8a;
-    color: white;
-  }
-  
-  .btn-odd {
-    background-color: #18b052;
-    color: white;
-  }
-  
-
-button{
-    height: 50px;
-    background-color: #18b052;
-    border-radius: 100px;
-    position: absolute;
-    margin-top: 2px;
-   
-    border:solid 2px #18b052;
-}
-
-input{
-    position: absolute;
-    height: 30px;
-    width: 20px;
-    border-radius: 20px;
-    padding-left: 50px ;
-    
-    outline: none;
-}
-i {
-    font-size: 30px;
-    width: 50px;
-    color: #0772fe;
-    padding-left:5px ;
-    margin-top: 2px;
-    cursor: pointer;
-    
-  
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
- 
-  form{
-
-    /* width: 22%; */
-    height: 50px;
-    /* background-color: #0048c4; */
-    position: absolute;
-    margin-left: 1400px;
-
+    #search_bar{
+        margin-top: 20px;
+        background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+        background-size: 24px;
+        background-color: var(--color-blanco);
+        width: 450px;
+        border-color: var(--color-gris);
+        padding: 10px 10px 10px 30px;
+        color: var(--color-primario);
+    }
+    #search_bar:focus{
+        border-color: var(--color-terciario);
+        box-shadow: 0 0 8px var(--color-pastel);
+        outline: 0 none;
+    }
+.main-container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
- 
-  }
-  
-   form:hover input{
-    width: 300px;
-   }
+    flex-wrap: wrap;
+    padding: 20px;
+}
+    .text__empty{
+        color: var(--color-primario);
+    }
+
+/*----------Media-Queries---------*/
+@media screen and (min-width: 280px) {
+    #search_bar{
+        width: 200px;
+    }
+}
+@media screen and (min-width: 360px) {
+    #search_bar{
+        width: 300px;
+    }
+}
+@media screen and (min-width: 768px) {
+    #search_bar{
+        width: 400px;
+    }
+}

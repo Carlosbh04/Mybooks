@@ -1,10 +1,10 @@
 
 
 
-.container_main{
+main{
    
     width: 100%;
-    background-color: rgb(253, 19, 7);
+    /* background-color: rgb(253, 19, 7); */
     
     display: flex;
     justify-content:center;
